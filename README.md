@@ -45,13 +45,22 @@ https://github.com/Kai-46/ARF-svox2
 
 First create the virtualenv; we recommend using conda:
 ```sh
-conda env create -f environment.yml
+conda env create -f environment.yml #(already done)
 conda activate plenoxel
+```
+if conda activate plexonel if giving you an error, see if you have conda
+```sh
+which conda
+```
+if, it is not there, add it on path and try to activate again
+
+```sh
+export PATH="/mnt/cs/cs153/customenvs/anaconda/bin:$PATH"
 ```
 
 Then clone the repo and install the library at the root (svox2), which includes a CUDA extension.
 
-**If and only if** your CUDA toolkit is older than 11, you will need to install CUB as follows:
+<!-- **If and only if** your CUDA toolkit is older than 11, you will need to install CUB as follows:
 `conda install -c bottler nvidiacub`.
 Since CUDA 11, CUB is shipped with the toolkit and installing this may lead to build errors.
 
@@ -84,7 +93,7 @@ To convert instant-ngp data, please try our script
 ```
 cd opt/scripts
 python ingp2nsvf.py <ingp_data_dir> <output_data_dir>
-```
+``` -->
 
 ## Optimization
 
