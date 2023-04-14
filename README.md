@@ -60,7 +60,7 @@ export PATH="/mnt/cs/cs153/customenvs/anaconda/bin:$PATH"
 
 Then clone the repo and install the library at the root (svox2), which includes a CUDA extension.
 
-<!-- **If and only if** your CUDA toolkit is older than 11, you will need to install CUB as follows:
+**If and only if** your CUDA toolkit is older than 11, you will need to install CUB as follows:
 `conda install -c bottler nvidiacub`.
 Since CUDA 11, CUB is shipped with the toolkit and installing this may lead to build errors.
 
@@ -93,7 +93,7 @@ To convert instant-ngp data, please try our script
 ```
 cd opt/scripts
 python ingp2nsvf.py <ingp_data_dir> <output_data_dir>
-``` -->
+```
 
 ## Optimization
 
