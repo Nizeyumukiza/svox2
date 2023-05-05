@@ -101,6 +101,7 @@ For training a single scene, see `opt/opt.py`. The launch script makes this easi
 
 Inside `opt/`, run
 `./launch.sh <exp_name> <GPU_id> <data_dir> -c <config>`
+example: `./launch.sh ./fern 0 ../nerf_llff_data/fern -c ./configs/co3d.json`
 
 Where `<config>` should be `configs/syn.json` for NeRF-synthetic scenes,
 `configs/llff.json`
@@ -122,6 +123,8 @@ Usage,
 
 By default this saves all frames, which is very slow. Add `--no_imsave` to avoid this.
 
+example: `python render_imgs.py ./ckpt/fern ../nerf_llff_data/fern --no_imsave`
+
 
 ## Rendering a spiral
 
@@ -130,7 +133,7 @@ Use `opt/render_imgs_circle.py`
 Usage,
 (in opt/)
 `python render_imgs_circle.py <CHECKPOINT.npz> <data_dir>`
-
+example: `python render_imgs_circle.py ./ckpt/fern ../nerf_llff_data/fern`
 ## Parallel task executor
 
 We provide a parallel task executor based on the task manager from PlenOctrees to automatically
