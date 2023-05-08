@@ -1047,6 +1047,7 @@ class SparseGrid(nn.Module):
                                     ray-cube intersection and quits
         :return: (N, 3), predicted RGB
         """
+        print(_C)
         if use_kernel and self.links.is_cuda and _C is not None and not return_raylen:
             assert rays.is_cuda
             basis_data = self._eval_basis_mlp(rays.dirs) if self.basis_type == BASIS_TYPE_MLP \
